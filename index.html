@@ -285,6 +285,7 @@
             <li><a href="classification.html">电子音乐分类</a></li>
             <li><a href="software.html">编曲软件</a></li>
             <li><a href="recommendations.html">音源推荐</a></li>
+            <li><a href="结业报告.docx">结业报告</a></li>
         </ul>
     </div>
 
@@ -396,17 +397,6 @@
     </div>
 
     <script>
-        document.getElementById('event-date').innerText = '日期：2023年7月15日';
-        document.getElementById('event-location').innerText = '地点：XXXX音乐厅';
-
-        var lineup = ['艺术家1', '艺术家2', '艺术家3'];
-        var lineupList = document.getElementById('event-lineup');
-        lineup.forEach(function (artist) {
-            var li = document.createElement('h5');
-            li.innerText = artist;
-            lineupList.appendChild(li);
-        });
-
         var currentMusic = null;
 
         function toggleMusic(card) {
