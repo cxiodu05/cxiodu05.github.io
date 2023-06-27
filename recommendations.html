@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音源推荐</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            word-wrap: break-word;
+        }
+
+        body {
+            background-image: url(./imgs/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #111;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            color: #333333;
+        }
+
+        .content .recommendation {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 24px;
+        }
+
+        .content .recommendation h2 {
+            font-size: 30px;
+            color: #333333;
+            margin-top: 0;
+        }
+
+        .content .recommendation img {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .content .recommendation p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar li {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .navbar li a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="development.html">电子音乐的发展</a></li>
+            <li><a href="classification.html">电子音乐分类</a></li>
+            <li><a href="software.html">编曲软件</a></li>
+            <li><a href="recommendations.html">音源推荐</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="recommendation">
+            <h2>Native Instruments Kontakt <a href="https://www.native-instruments.com/zh/products/komplete/samplers/kontakt-7-player/">#</a></h2>
+            <img src="./imgs/kontakt.jpg" alt="Native Instruments Kontakt">
+            <p>Kontakt 是一款强大的采样器平台，提供广泛的音色库和灵活的声音设计选项。它适用于各种音乐风格，并具有丰富的第三方采样库可供选择。</p>
+        </div>
+
+        <div class="recommendation">
+            <h2>Xfer Records Serum <a href="https://xferrecords.com/products/serum/">#</a></h2>
+            <img src="./imgs/serum.jpg" alt="Xfer Records Serum">
+            <p>Serum 是一款流行的软件合成器，以其清晰而动态的声音而闻名。它具有直观的界面和广泛的调制选项，可以创建各种类型的声音。</p>
+        </div>
+
+        <div class="recommendation">
+            <h2>Spectrasonics Omnisphere <a href="https://www.spectrasonics.net/products/omnisphere/">#</a></h2>
+            <img src="./imgs//Spectrasonics_Omnisphere.jpg" alt="Spectrasonics Omnisphere">
+            <p>Omnisphere 是一款综合性的音源软件，融合了采样、合成和声音设计功能。它提供了巨大的音色库和创造性的音频处理工具。</p>
+        </div>
+
+        <div class="recommendation">
+            <h2>Arturia V Collection <a href="https://www.arturia.com/v-collection">#</a></h2>
+            <img src="./imgs/Arturia_V_Collection.jpg" alt="Arturia V Collection">
+            <p>V Collection 是一个集合了多个经典模拟合成器的软件包，包括 Minimoog、Prophet、Jupiter 等等。它提供了逼真的模拟音色和直观的控制界面。</p>
+        </div>
+
+        <div class="recommendation">
+            <h2>u-he Diva <a href="https://u-he.com/products/diva/">#</a></h2>
+            <img src="./imgs/diva.jpg" alt="u-he Diva">
+            <p>Diva 是一款模拟合成器，旨在模拟经典模拟合成器的音色。它提供了高质量的模拟音色和广泛的调制选项。</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编曲软件</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            word-wrap: break-word;
+        }
+
+        body {
+            background-image: url(./imgs/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #111;
+        }
+
+        .content {
+            padding: 20px;
+            margin: auto;
+            max-width: 1000px;
+            color: #fff;
+            text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+
+        }
+
+        .content h2 {
+            font-size: 50px;
+            color: #336699;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .software {
+            margin-bottom: 40px;
+        }
+
+        .software img {
+            max-width: 1000px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar li {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .navbar li a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="development.html">电子音乐的发展</a></li>
+            <li><a href="classification.html">电子音乐分类</a></li>
+            <li><a href="software.html">编曲软件</a></li>
+            <li><a href="recommendations.html">音源推荐</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="software">
+            <h2>Ableton Live <a href="https://www.ableton.com/">#</a></h2>
+            <img src="./imgs/Ableton_Live.jpg" alt="Ableton Live">
+            <p>Ableton Live是一款功能强大的音乐制作软件，以其实时表演和即兴创作的能力而闻名。它提供了一个直观的界面，使用户能够以非线性方式组织音频和MIDI素材，并进行实时处理和效果操作。</p>
+        </div>
+
+        <div class="software">
+            <h2>Logic Pro <a href="https://www.apple.com.cn/logic-pro/">#</a></h2>
+            <img src="./imgs/Logic_Pro.jpg" alt="Logic Pro">
+            <p>Logic Pro是苹果公司推出的专业音乐制作软件，主要面向Mac用户。它具有广泛的音频处理和混音工具，以及强大的MIDI编辑功能。Logic Pro还内置了丰富的音频效果和乐器库，可用于创作各种类型的音乐。
+            </p>
+        </div>
+
+        <div class="software">
+            <h2>Pro Tools <a href="https://www.avid.com/">#</a></h2>
+            <img src="./imgs/Pro_Tools.jpg" alt="Pro Tools">
+            <p>Pro Tools是一款专业的数字音频工作站（DAW），被广泛用于音频录制、编辑和混音。它提供了高质量的音频处理工具和混音功能，以及先进的音频编辑和时间轴功能。Pro
+                Tools通常被用于专业录音室和电影音乐制作。</p>
+        </div>
+
+        <div class="software">
+            <h2>FL Studio <a href="https://www.image-line.com/fl-studio/">#</a></h2>
+            <img src="./imgs/Fl_Studio.jpg" alt="FL Studio">
+            <p>FL Studio（原名FruityLoops）是一款功能强大的数字音乐工作站，适用于电子音乐制作。它提供了直观的界面和多轨道编辑功能，支持音频、MIDI和采样的处理和编排。FL
+                Studio还有丰富的虚拟乐器和效果插件。</p>
+        </div>
+
+        <div class="software">
+            <h2>Cubase <a href="https://www.steinberg.net/cubase/">#</a></h2>
+            <img src="./imgs/Cubase.jpg" alt="Cubase">
+            <p>Cubase是一款广受欢迎的音乐制作软件，提供了全面的音频编辑、混音和创作工具。它支持多轨道录制和编辑，具有强大的MIDI功能和音频处理插件。Cubase适用于各种音乐类型和制作需求。</p>
+        </div>
+    </div>
+</body>
+
+</html>

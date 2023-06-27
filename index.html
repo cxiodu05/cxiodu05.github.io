@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子音乐网站</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            word-wrap: break-word;
+        }
+
+        body {
+            background-image: url(./imgs/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #111;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-section {
+            text-align: center;
+            margin: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-section h2 {
+            font-size: 24px;
+        }
+
+        .feature-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .event-main-title {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .event-section h2 {
+            font-size: 24px;
+        }
+
+        .event-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar li {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .navbar li a {
+                padding: 10px;
+            }
+        }
+
+        .music-section {
+            gap: 24px;
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .music-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .music-card:hover {
+            transform: scale(1.1);
+        }
+
+        .music-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .music-card-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-left: 0;
+            font-size: 16px;
+            margin-top: 10px;
+            text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+        }
+
+        /* 艺术家卡片样式 */
+        .artist-section {
+            gap: 24px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .artist-card {
+            position: relative;
+            /* 添加相对定位 */
+            width: 300px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .artist-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #ff0000;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .artist-card .artist-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .artist-card .team {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .artist-card .bio {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .artist-card .link {
+            font-size: 14px;
+            color: #0000ff;
+            text-decoration: none;
+        }
+
+        /* 近期活动卡片样式 */
+        .event-card {
+            color: #ffffff;
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .event-card .event-details {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .event-card .event-title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .event-card .event-link {
+            font-size: 18px;
+            color: #00eaff;
+            text-decoration: none;
+        }
+
+        .event-card .event-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.3s;
+            /* 添加过渡效果 */
+            opacity: 0.8;
+            /* 图片透明度 */
+        }
+
+        .event-card:hover .event-image {
+            opacity: 1;
+            /* 鼠标悬停时显示图片 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="development.html">电子音乐的发展</a></li>
+            <li><a href="classification.html">电子音乐分类</a></li>
+            <li><a href="software.html">编曲软件</a></li>
+            <li><a href="recommendations.html">音源推荐</a></li>
+        </ul>
+    </div>
+
+    <h1 class="main-title">欢迎来到电子音乐网站</h1>
+
+    <div class="feature-section">
+        <p>在这里你可以发现最新的电子音乐新闻，欣赏热门的音乐作品以及获取艺术家推荐和活动信息。</p>
+
+    </div>
+    <div class="music-section">
+
+        <div class="music-card" onclick="toggleMusic(this)">
+            <img src="imgs/无人区.jpg" alt="Music 1">
+            <h3 class="music-card-title">無人区</h3>
+            <audio src="songs/無人区.mp3" id="music1"></audio>
+        </div>
+
+        <div class="music-card" onclick="toggleMusic(this)">
+            <img src="imgs/Monster.jpg" alt="Music 2">
+            <h3 class="music-card-title">Monster</h3>
+            <audio src="songs/Monster.mp3" id="music2"></audio>
+        </div>
+
+        <div class="music-card" onclick="toggleMusic(this)">
+            <img src="imgs/Infinite Strife.jpg" alt="Music 3">
+            <h3 class="music-card-title">Infinite Strife</h3>
+            <audio src="songs/Infinite Strife.mp3" id="music3"></audio>
+        </div>
+
+        <div class="music-card" onclick="toggleMusic(this)">
+            <img src="imgs/Defection.jpg" alt="Music 4">
+            <h3 class="music-card-title">Defection</h3>
+            <audio src="songs/Defection.mp3" id="music4"></audio>
+        </div>
+
+        <div class="music-card" onclick="toggleMusic(this)">
+            <img src="imgs/Stasis.jpg" alt="Music 5">
+            <h3 class="music-card-title">Stasis</h3>
+            <audio src="songs/Stasis.mp3" id="music5"></audio>
+        </div>
+
+    </div>
+    <div class="artist-section">
+        <div class="artist-card">
+            <h3 class="artist-name">HARDCORE TANO*C</h3>
+            <p class="bio">
+                由众多日本电子音乐制作人一起创立的独立音乐团体。本团体最初由永井良和（REDALiCE/赤いひと）创立，当时本社团以ヾ(゜Д゜)ノハードコアタノシー名义活动，但在2007年在发布专辑《HARDCORE
+                SYNDROME》后将社团名称改为“HARDCORE TANO*C”。 TANO*C即“楽しい”的谐音，意为快乐、开心。
+            </p>
+            <a href="http://www.tano-c.net/" class="link">了解更多</a>
+        </div>
+
+        <div class="artist-card">
+            <h3 class="artist-name">Feint</h3>
+            <p class="bio">
+                Andrew Isaac Hu, known professionally as Feint, is a British Drum & Bass producer and DJ, who debuted on
+                Monstercat with his track Atlas, which was released on July 9, 2011.
+            </p>
+            <a href="https://monstercat.fandom.com/wiki/Feint" class="link">了解更多</a>
+        </div>
+
+        <div class="artist-card">
+            <h3 class="artist-name">Team Grimoire</h3>
+            <p class="bio">
+                Team Grimoire made his first appearance in BEMANI as one of the winners of the KAC2012 Original Song
+                Contest for SOUND VOLTEX BOOTH. While he is known for his baroque style of hardcore, he has also touched
+                on a number of other genres, having a particular affinity towards gabber, crossbreed, and mainstream
+                hardcore. His popularity started to pick up after his first SOUND VOLTEX appearance and soon after, he
+                found himself appearing in a handful of doujin releases.
+            </p>
+            <a href="https://remywiki.com/Team_Grimoire" class="link">了解更多</a>
+        </div>
+
+
+    </div>
+
+    <div class="event-main-title">
+        <h2>近期活动</h2>
+        <p>我们将定期举办电子音乐相关的活动和演出，让你与喜爱的音乐亲密接触。</p>
+    </div>
+    <div class="event-section">
+        <div class="event-card">
+            <div class="event-image" style="background-image: url(./imgs/event1.jpg);">
+                <div class="event-details">
+                    <h3 class="event-title">TANO*C TOUR 2023 the ANTHEM</h3>
+                    <a href="https://www.tano-c.net/tour2023/" class="event-link">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="event-card">
+            <div class="event-image" style="background-image: url(./imgs/event2.jpg);">
+                <div class="event-details">
+                    <h3 class="event-title">2023年明日世界电子音乐节</h3>
+                    <a href="https://feschedule.com/zh-CN/festival/tomorrowland-belgium-2023"
+                        class="event-link">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="event-card">
+            <div class="event-image" style="background-image: url(./imgs/event3.jpg);">
+                <div class="event-details">
+                    <h3 class="event-title">EDC Orlando 2023</h3>
+                    <a href="https://feschedule.com/zh-CN/festival/edc-orlando-2023?utc=%2B08:00"
+                        class="event-link">了解更多</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('event-date').innerText = '日期：2023年7月15日';
+        document.getElementById('event-location').innerText = '地点：XXXX音乐厅';
+
+        var lineup = ['艺术家1', '艺术家2', '艺术家3'];
+        var lineupList = document.getElementById('event-lineup');
+        lineup.forEach(function (artist) {
+            var li = document.createElement('h5');
+            li.innerText = artist;
+            lineupList.appendChild(li);
+        });
+
+        var currentMusic = null;
+
+        function toggleMusic(card) {
+            var audio = card.querySelector('audio');
+            if (audio.paused) {
+                if (currentMusic) {
+                    currentMusic.pause();
+                    currentMusic.load();
+                }
+                audio.play();
+                currentMusic = audio;
+            } else {
+                audio.pause();
+                currentMusic = null;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

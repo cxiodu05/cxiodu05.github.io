@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子音乐分类</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            word-wrap: break-word;
+        }
+
+        body {
+            background-image: url(./imgs/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #111;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .content h1 {
+            color: #333333;
+        }
+
+        .content .card {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+        }
+
+        .content .card h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .content .card p {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .content .card ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .content .card ul li {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar li {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .navbar li a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="development.html">电子音乐的发展</a></li>
+            <li><a href="classification.html">电子音乐分类</a></li>
+            <li><a href="software.html">编曲软件</a></li>
+            <li><a href="recommendations.html">音源推荐</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>House</h2>
+            <p>House音乐起源于20世纪80年代的芝加哥，是电子音乐的主流流派之一。House音乐通常以四四拍和简洁的节奏为基础，融合了迪斯科、福音和电子元素，具有明快、欢快的特点。</p>
+            <p>特点:</p>
+            <ul>
+                <li>四四拍和简洁的节奏</li>
+                <li>迪斯科、福音和电子元素</li>
+                <li>明快、欢快的音乐</li>
+                <li>充满活力的舞曲</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Techno</h2>
+            <p>Techno音乐起源于20世纪80年代的底特律，是一种重要的电子音乐流派。Techno音乐通常以快速的节奏、循环的声音和机械化的感觉为特点，创造出充满力量和冷酷的音乐体验。</p>
+            <p>特点:</p>
+            <ul>
+                <li>快速的节奏和循环的声音</li>
+                <li>机械化的感觉</li>
+                <li>力量和冷酷的音乐体验</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Trance</h2>
+            <p>Trance音乐起源于20世纪90年代的欧洲，是一种富有感情和震撼力的电子音乐流派。Trance音乐通常以激情四溢的旋律、强烈的合成器音色和高能量的节奏为特点，带给听众强烈的情感冲击。</p>
+            <p>特点:</p>
+            <ul>
+                <li>激情四溢的旋律</li>
+                <li>强烈的合成器音色</li>
+                <li>高能量的节奏</li>
+                <li>强烈的情感冲击</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Dubstep</h2>
+            <p>Dubstep音乐起源于英国，是一种充满重低音和扭曲效果的电子音乐流派。Dubstep音乐通常以缓慢的节奏和强烈的低音为基础，结合扭曲的声音效果和复杂的编曲，创造出独特的深沉和兴奋的音乐体验。</p>
+            <p>特点:</p>
+            <ul>
+                <li>缓慢的节奏和强烈的低音</li>
+                <li>扭曲的声音效果和复杂的编曲</li>
+                <li>深沉和兴奋的音乐体验</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Drum and Bass</h2>
+            <p>Drum and Bass音乐起源于英国，是一种以快速的节奏和复杂的鼓点为特点的电子音乐流派。Drum and
+                Bass音乐通常以强烈的低音和快速的鼓点为基础，结合复杂的编排和采样技术，创造出紧张而动感的音乐体验。</p>
+            <p>特点:</p>
+            <ul>
+                <li>快速的节奏和复杂的鼓点</li>
+                <li>强烈的低音</li>
+                <li>紧张而动感的音乐体验</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Trap</h2>
+            <p>Trap音乐起源于美国南部的嘻哈文化，后来在电子音乐中发展出独特的风格。Trap音乐通常具有缓慢而沉重的节奏，强调低音和808鼓点，结合扭曲的声音效果和陷阱元素，创造出充满张力和能量的音乐。</p>
+            <p>特点:</p>
+            <ul>
+                <li>缓慢而沉重的节奏</li>
+                <li>强调低音和808鼓点</li>
+                <li>扭曲的声音效果和陷阱元素</li>
+                <li>充满张力和能量的音乐</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Chillout</h2>
+            <p>Chillout音乐是一种轻松、放松的电子音乐流派，常用于创造舒缓的氛围和放松心情。Chillout音乐通常以慢节奏、柔和的旋律和温暖的音色为特点，带给听众平静和宁静的感觉。</p>
+            <p>特点:</p>
+            <ul>
+                <li>慢节奏和柔和的旋律</li>
+                <li>温暖的音色</li>
+                <li>创造平静和宁静的感觉</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Progressive House</h2>
+            <p>Progressive House音乐是House音乐的一种分支流派，它融合了House的节奏和旋律元素，并加入了更多的编曲技巧和音乐进阶的特点。Progressive
+                House音乐通常具有渐进式的结构、丰富多变的音乐元素和较长的曲目长度。</p>
+            <p>特点:</p>
+            <ul>
+                <li>渐进式的结构</li>
+                <li>丰富多变的音乐元素</li>
+                <li>较长的曲目长度</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Hardstyle</h2>
+            <p>Hardstyle音乐起源于欧洲，是一种充满力量和能量的电子音乐流派。Hardstyle音乐通常以快速的节奏、强烈的鼓点和强烈的合成器音色为特点，带给听众强烈的舞曲体验。</p>
+            <p>特点:</p>
+            <ul>
+                <li>快速的节奏和强烈的鼓点</li>
+                <li>强烈的合成器音色</li>
+                <li>充满力量和能量的音乐体验</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
